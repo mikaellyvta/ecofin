@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+     
+    <title>EcoFin - Início</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+    <div class="app">
+
+
+        <!-- ========================= -->
+        <!-- CABEÇALHO -->
+        <!-- ========================= -->
+
+        <header class="header">
+
+            <div class="logo-area">
+
+                <img
+                    src="logo.png"
+                    alt="Logo EcoFin"
+                    class="logo"
+                >
+
+                <div>
+
+                    <h1>EcoFin</h1>
+
+                    <p>
+                        ECONOMIA FINANCEIRA
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="notification-button"
+                onclick="window.location.href='notificacoes.html'"
+            >
+                🔔
+            </button>
+
+        </header>
+
+
+
+        <main class="container">
+
+
+            <!-- ========================= -->
+            <!-- SAUDAÇÃO -->
+            <!-- ========================= -->
+
+            <section class="box">
+
+                <h2>
+                    Olá,
+                    <span id="nomeUsuario">
+                        Usuário
+                    </span>!
+                </h2>
+
+                <p class="dica">
+                    Bem-vindo ao EcoFin!
+                </p>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- DINHEIRO DISPONÍVEL -->
+            <!-- ========================= -->
+
+            <section class="saldo-card">
+
+                <div class="saldo-titulo">
+
+                    <div class="icone-dinheiro">
+                        💰
+                    </div>
+
+                    <span>
+                        Dinheiro disponível
+                    </span>
+
+                </div>
+
+
+                <h2 id="saldoDisponivel">
+                    R$ 0,00
+                </h2>
+
+
+                <p>
+                    salário + valores extras - gastos
+                </p>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- RESUMO -->
+            <!-- ========================= -->
+
+            <section class="resumo">
+
+
+                <div class="resumo-card">
+
+                    <div class="icone-resumo verde">
+                        💵
+                    </div>
+
+                    <span>
+                        Salário
+                    </span>
+
+                    <strong id="salarioUsuario">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+
+                <div class="resumo-card">
+
+                    <div class="icone-resumo verde">
+                        🎁
+                    </div>
+
+                    <span>
+                        Extras
+                    </span>
+
+                    <strong id="extraUsuario">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+
+                <div class="resumo-card">
+
+                    <div class="icone-resumo laranja">
+                        💸
+                    </div>
+
+                    <span>
+                        Gastos
+                    </span>
+
+                    <strong id="totalGastos">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- ADICIONAR VALOR EXTRA -->
+            <!-- ========================= -->
+
+            <section class="box">
+
+                <h2>
+                    Adicionar valor
+                </h2>
+
+                <p class="dica">
+                    Recebeu um bônus, presente ou algum dinheiro extra?
+                </p>
+
+
+                <label for="descricaoExtra">
+                    Descrição
+                </label>
+
+                <input
+                    type="text"
+                    id="descricaoExtra"
+                    placeholder="Ex: Presente"
+                >
+
+
+                <label for="valorExtra">
+                    Valor
+                </label>
+
+                <input
+                    type="number"
+                    id="valorExtra"
+                    placeholder="Ex: 100"
+                    min="0"
+                    step="0.01"
+                >
+
+
+                <button
+                    id="btnAdicionarExtra"
+                    class="botao-verde"
+                >
+                    + Adicionar valor
+                </button>
+
+
+                <p
+                    id="mensagemExtra"
+                    class="mensagem-meta"
+                ></p>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- ADICIONAR GASTO -->
+            <!-- ========================= -->
+
+            <section class="box">
+
+                <h2>
+                    Adicionar gasto
+                </h2>
+
+                <p class="dica">
+                    Registre aquilo que você comprou ou pagou.
+                </p>
+
+
+                <label for="nomeGasto">
+                    O que você gastou?
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeGasto"
+                    placeholder="Ex: Almoço"
+                >
+
+
+                <label for="valorGasto">
+                    Valor
+                </label>
+
+                <input
+                    type="number"
+                    id="valorGasto"
+                    placeholder="Ex: 25"
+                    min="0"
+                    step="0.01"
+                >
+
+
+                <label for="categoriaGasto">
+                    Categoria
+                </label>
+
+                <select id="categoriaGasto">
+
+                    <option value="">
+                        Escolha uma categoria
+                    </option>
+
+                    <option value="Alimentação">
+                        🍔 Alimentação
+                    </option>
+
+                    <option value="Transporte">
+                        🚌 Transporte
+                    </option>
+
+                    <option value="Brinquedo">
+                        🧸 Brinquedo
+                    </option>
+
+                    <option value="Educação">
+                        📚 Educação
+                    </option>
+
+                    <option value="Lazer">
+                        🎮 Lazer
+                    </option>
+
+                    <option value="Saúde">
+                        ❤️ Saúde
+                    </option>
+
+                    <option value="Outro">
+                        📦 Outro
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="btnAdicionarGasto"
+                    class="botao-verde"
+                >
+                    + Adicionar gasto
+                </button>
+
+
+                <p
+                    id="mensagemGasto"
+                    class="mensagem-meta"
+                ></p>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- HISTÓRICO DE GASTOS -->
+            <!-- ========================= -->
+
+            <section class="box">
+
+                <div class="titulo-lista">
+
+                    <h2>
+                        Histórico de gastos
+                    </h2>
+
+                    <span id="contadorGastos">
+                        0 gastos
+                    </span>
+
+                </div>
+
+
+                <div id="listaGastos">
+
+                    <div class="vazio">
+                        Nenhum gasto registrado.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- GASTOS POR CATEGORIA -->
+            <!-- ========================= -->
+
+            <section class="box">
+
+                <h2>
+                    Gastos por categoria
+                </h2>
+
+                <div id="historicoCategorias">
+
+                    <div class="vazio">
+                        Nenhum gasto registrado.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- META DE ECONOMIA -->
+            <!-- ========================= -->
+
+            <section
+                class="box"
+                id="meta"
+            >
+
+                <h2>
+                    🎯 Minha meta
+                </h2>
+
+                <p class="dica">
+                    Defina quanto você deseja economizar até o final do mês.
+                </p>
+
+
+                <label for="valorMeta">
+                    Quanto você quer economizar?
+                </label>
+
+                <input
+                    type="number"
+                    id="valorMeta"
+                    placeholder="Ex: 200"
+                    min="0"
+                    step="0.01"
+                >
+
+
+                <button
+                    id="btnSalvarMeta"
+                    class="botao-verde"
+                >
+                    Salvar meta
+                </button>
+
+
+                <!-- TEXTO DA META -->
+
+                <div class="meta-info">
+
+                    <h3 id="textoMeta">
+                        Nenhuma meta cadastrada.
+                    </h3>
+
+                    <p id="dataMeta">
+                        Até o final do mês
+                    </p>
+
+                </div>
+
+
+                <!-- CÍRCULO -->
+
+                <div class="meta-circulo">
+
+                    <span id="porcentagemMeta">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <!-- BARRA -->
+
+                <div class="barra">
+
+                    <div
+                        class="barra-preenchida"
+                        id="barraMeta"
+                    ></div>
+
+                </div>
+
+
+                <!-- PROGRESSO -->
+
+                <p
+                    class="mensagem-meta"
+                    id="mensagemMeta"
+                >
+                    Nenhuma meta cadastrada.
+                </p>
+
+
+                <!-- ALERTA -->
+
+                <div
+                    id="alertaMeta"
+                    class="alerta-meta"
+                ></div>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- DICAS ROTATIVAS -->
+            <!-- ========================= -->
+
+            <section class="dica-rodape">
+
+                <div>
+                    💡
+                </div>
+
+                <p id="dicaRotativa">
+                    Organizar seus gastos é o primeiro passo para cuidar do seu dinheiro.
+                </p>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- ========================= -->
+        <!-- MENU -->
+        <!-- ========================= -->
+
+        <nav class="menu">
+
+            <button
+                class="menu-item ativo"
+                onclick="window.location.href='index.html'"
+            >
+
+                <span>
+                    ⌂
+                </span>
+
+                <small>
+                    Início
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-item"
+                onclick="window.location.href='index.html#listaGastos'"
+            >
+
+                <span>
+                    ▣
+                </span>
+
+                <small>
+                    Gastos
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-item"
+                onclick="window.location.href='index.html#meta'"
+            >
+
+                <span>
+                    ✓
+                </span>
+
+                <small>
+                    Metas
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-item"
+                onclick="window.location.href='notificacoes.html'"
+            >
+
+                <span>
+                    🔔
+                </span>
+
+                <small>
+                    Avisos
+                </small>
+
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
