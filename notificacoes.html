@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EcoFin - Notificações</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app">
+
+
+        <!-- ========================= -->
+        <!-- CABEÇALHO -->
+        <!-- ========================= -->
+
+        <header class="header">
+
+            <div class="logo-area">
+
+                <img
+                    src="logo.png"
+                    alt="Logo EcoFin"
+                    class="logo"
+                >
+
+                <div>
+
+                    <h1>
+                        Notificações
+                    </h1>
+
+                    <p>
+                        ECONOMIA FINANCEIRA
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="notification-button"
+                onclick="window.location.href='index.html'"
+            >
+                ←
+            </button>
+
+        </header>
+
+
+
+        <main class="container">
+
+
+            <!-- ========================= -->
+            <!-- RESUMO -->
+            <!-- ========================= -->
+
+            <section class="saldo-card">
+
+                <div class="saldo-titulo">
+
+                    <div class="icone-dinheiro">
+                        🔔
+                    </div>
+
+                    <span>
+                        Central de notificações
+                    </span>
+
+                </div>
+
+
+                <h2 id="totalNotificacoes">
+                    0
+                </h2>
+
+
+                <p>
+                    notificações registradas
+                </p>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- HISTÓRICO -->
+            <!-- ========================= -->
+
+            <section class="box">
+
+                <div class="titulo-lista">
+
+                    <h2>
+                        Avisos
+                    </h2>
+
+
+                    <button
+                        id="limparNotificacoes"
+                        class="remover"
+                    >
+                        Limpar
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="listaNotificacoes"
+                    class="lista-notificacoes"
+                >
+
+                    <!--
+                        As notificações serão
+                        colocadas aqui pelo JS.
+                    -->
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- INFORMAÇÃO -->
+            <!-- ========================= -->
+
+            <section class="box">
+
+                <h2>
+                    💡 Sobre os avisos
+                </h2>
+
+                <p class="dica">
+
+                    O EcoFin analisa seus gastos,
+                    valores extras e sua meta de
+                    economia para mostrar avisos
+                    importantes.
+
+                </p>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- ========================= -->
+        <!-- MENU -->
+        <!-- ========================= -->
+
+        <nav class="menu">
+
+            <button
+                class="menu-item"
+                onclick="window.location.href='index.html'"
+            >
+
+                <span>
+                    ⌂
+                </span>
+
+                <small>
+                    Início
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-item"
+                onclick="window.location.href='index.html#listaGastos'"
+            >
+
+                <span>
+                    ▣
+                </span>
+
+                <small>
+                    Gastos
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-item"
+                onclick="window.location.href='index.html#meta'"
+            >
+
+                <span>
+                    ✓
+                </span>
+
+                <small>
+                    Metas
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-item ativo"
+            >
+
+                <span>
+                    🔔
+                </span>
+
+                <small>
+                    Avisos
+                </small>
+
+            </button>
+
+        </nav>
+
+
+    </div>
+
+
+    <script src="notificacoes.js"></script>
+
+</body>
+
+</html>

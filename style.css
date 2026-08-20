@@ -1,0 +1,1789 @@
+/* =========================================================
+   ECOFIN — ESTILO GERAL
+   Identidade: Azul escuro + Verde + Azul + Dourado + Ciano
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    color: #f4f8fb;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0, 255, 128, 0.10),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 100% 40%,
+            rgba(0, 130, 255, 0.08),
+            transparent 35%
+        ),
+        #03151d;
+
+    padding-bottom: 100px;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+    --fundo: #03151d;
+    --fundo-card: #071f29;
+    --fundo-card-2: #092733;
+
+    --verde: #8cff00;
+    --verde-claro: #b5ff32;
+    --verde-escuro: #1fbd52;
+
+    --azul: #008cff;
+    --azul-claro: #19c9ff;
+    --ciano: #00d9d9;
+
+    --dourado: #ffc928;
+    --amarelo: #ffe600;
+
+    --vermelho: #ff5364;
+
+    --branco: #f4f8fb;
+    --cinza: #9eb1ba;
+
+    --borda: rgba(255, 255, 255, 0.08);
+
+    --sombra:
+        0 12px 35px rgba(0, 0, 0, 0.35);
+
+    --raio: 20px;
+}
+
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(calc(100% - 32px), 1050px);
+
+    margin: 0 auto;
+
+    padding-top: 30px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.header {
+    width: min(calc(100% - 32px), 1050px);
+
+    margin: 0 auto;
+
+    padding: 22px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.logo {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+}
+
+.logo-area h1 {
+    font-size: 22px;
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--verde),
+            var(--azul-claro)
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.logo-area p {
+    margin-top: 2px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   BOTÃO DE NOTIFICAÇÃO
+   ========================================================= */
+
+.notification-button {
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: var(--branco);
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.notification-button:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(140, 255, 0, 0.5);
+
+    background: rgba(140, 255, 0, 0.08);
+}
+
+
+/* =========================================================
+   CARDS GERAIS
+   ========================================================= */
+
+.box {
+    position: relative;
+
+    margin-bottom: 22px;
+
+    padding: 25px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: var(--raio);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(9, 39, 51, 0.96),
+            rgba(5, 27, 36, 0.96)
+        );
+
+    box-shadow: var(--sombra);
+
+    overflow: hidden;
+}
+
+.box::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: -80px;
+    right: -50px;
+
+    border-radius: 50%;
+
+    background: rgba(140, 255, 0, 0.10);
+
+    filter: blur(25px);
+}
+
+.box h2 {
+    margin-bottom: 16px;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   SAUDAÇÃO
+   ========================================================= */
+
+.box .dica {
+    color: var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CARD DE SALDO
+   ========================================================= */
+
+.saldo-card {
+    position: relative;
+
+    margin-bottom: 24px;
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(0, 140, 255, 0.25),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #073b2d,
+            #052630 55%,
+            #062544
+        );
+
+    border: 1px solid rgba(140, 255, 0, 0.20);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.40);
+}
+
+.saldo-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -100px;
+    bottom: -140px;
+
+    border-radius: 50%;
+
+    border: 25px solid rgba(140, 255, 0, 0.10);
+}
+
+.saldo-titulo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--cinza);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.icone-dinheiro {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: rgba(140, 255, 0, 0.12);
+
+    border: 1px solid rgba(140, 255, 0, 0.25);
+
+    font-size: 20px;
+}
+
+.saldo-card h2 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    font-size: clamp(30px, 5vw, 45px);
+
+    font-weight: 800;
+
+    color: var(--branco);
+}
+
+.saldo-card > p {
+    color: var(--cinza);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESUMO FINANCEIRO
+   3 CARDS LADO A LADO
+   ========================================================= */
+
+.resumo {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin: 18px 0 24px;
+}
+
+
+/* =========================================================
+   CARD INDIVIDUAL DO RESUMO
+   ========================================================= */
+
+.resumo-card {
+    min-width: 0;
+
+    min-height: 105px;
+
+    padding: 14px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(9, 39, 51, 0.98),
+            rgba(4, 25, 33, 0.98)
+        );
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.28);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   ÍCONES DO RESUMO
+   ========================================================= */
+
+.icone-resumo {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 8px;
+
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    font-size: 18px;
+}
+
+.icone-resumo.verde {
+    background: rgba(140, 255, 0, 0.10);
+
+    border: 1px solid rgba(140, 255, 0, 0.15);
+}
+
+.icone-resumo.laranja {
+    background: rgba(255, 201, 40, 0.10);
+
+    border: 1px solid rgba(255, 201, 40, 0.15);
+}
+
+
+/* =========================================================
+   TEXTO DOS CARDS
+   ========================================================= */
+
+.resumo-card > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #9eb1ba;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.resumo-card > strong {
+    display: block;
+
+    color: #f4f8fb;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CORES DOS CARDS
+   ========================================================= */
+
+/* Salário */
+
+.resumo-card:nth-child(1) {
+    border-top: 3px solid #8cff00;
+}
+
+.resumo-card:nth-child(1) strong {
+    color: #8cff00;
+}
+
+
+/* Extras */
+
+.resumo-card:nth-child(2) {
+    border-top: 3px solid #19c9ff;
+}
+
+.resumo-card:nth-child(2) strong {
+    color: #19c9ff;
+}
+
+
+/* Gastos */
+
+.resumo-card:nth-child(3) {
+    border-top: 3px solid #ffc928;
+}
+
+.resumo-card:nth-child(3) strong {
+    color: #ffc928;
+}
+
+
+/* =========================================================
+   HOVER DOS CARDS
+   ========================================================= */
+
+.resumo-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(140, 255, 0, 0.25);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   TÍTULOS DE LISTAS
+   ========================================================= */
+
+.titulo-lista {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.titulo-lista h2 {
+    margin: 0;
+}
+
+
+/* =========================================================
+   FORMULÁRIOS
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-top: 16px;
+    margin-bottom: 7px;
+
+    color: #c7d7dd;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 0 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    background: rgba(0, 0, 0, 0.22);
+
+    color: var(--branco);
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+input::placeholder {
+    color: #718891;
+}
+
+input:focus,
+select:focus {
+    border-color: rgba(140, 255, 0, 0.65);
+
+    box-shadow:
+        0 0 0 3px rgba(140, 255, 0, 0.08);
+}
+
+select option {
+    background: #071f29;
+
+    color: white;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+button {
+    font-family: inherit;
+}
+
+.botao-verde {
+    width: 100%;
+
+    min-height: 50px;
+
+    margin-top: 20px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8cff00,
+            #35d45b
+        );
+
+    color: #03151d;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 22px rgba(88, 255, 0, 0.18);
+
+    transition: 0.25s;
+}
+
+.botao-verde:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(88, 255, 0, 0.28);
+}
+
+.botao-verde:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   BOTÃO REMOVER
+   ========================================================= */
+
+.remover {
+    border: 1px solid rgba(255, 83, 100, 0.25);
+
+    border-radius: 10px;
+
+    padding: 8px 13px;
+
+    background: rgba(255, 83, 100, 0.08);
+
+    color: #ff7885;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.remover:hover {
+    background: rgba(255, 83, 100, 0.16);
+}
+
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.meta-card {
+    position: relative;
+
+    padding: 23px;
+
+    margin-bottom: 22px;
+
+    border-radius: 21px;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(255, 201, 40, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #18210f,
+            #092630
+        );
+
+    border: 1px solid rgba(255, 201, 40, 0.20);
+}
+
+.meta-card h2 {
+    color: var(--dourado);
+}
+
+.texto-meta {
+    color: var(--branco);
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+.data-meta {
+    margin-top: 6px;
+
+    color: var(--cinza);
+
+    font-size: 12px;
+}
+
+.meta-progresso {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.barra-meta {
+    position: relative;
+
+    flex: 1;
+
+    height: 12px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#barraMeta {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffc928,
+            #fff000
+        );
+
+    box-shadow:
+        0 0 12px rgba(255, 210, 0, 0.35);
+
+    transition: width 0.5s ease;
+}
+
+#porcentagemMeta {
+    min-width: 45px;
+
+    color: var(--dourado);
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    text-align: right;
+}
+
+#mensagemMeta {
+    margin-top: 13px;
+
+    color: var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+#alertaMeta {
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border-radius: 13px;
+
+    background: rgba(255, 201, 40, 0.07);
+
+    border: 1px solid rgba(255, 201, 40, 0.15);
+
+    color: #dce7eb;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LISTA DE GASTOS
+   ========================================================= */
+
+.lista-gastos {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.item-gasto {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition: 0.2s;
+}
+
+.item-gasto:hover {
+    transform: translateX(3px);
+
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.gasto-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    min-width: 0;
+}
+
+.gasto-info strong {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: var(--branco);
+}
+
+.gasto-info small {
+    color: var(--cinza);
+
+    font-size: 11px;
+}
+
+.valor-gasto {
+    color: #ff6877;
+
+    white-space: nowrap;
+
+    font-size: 14px;
+}
+
+.vazio {
+    padding: 35px 15px;
+
+    color: var(--cinza);
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CATEGORIAS
+   ========================================================= */
+
+.categoria-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px 16px;
+
+    margin-bottom: 9px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.categoria-item strong:first-child {
+    color: var(--branco);
+}
+
+.categoria-item > strong:last-child {
+    color: var(--ciano);
+}
+
+
+/* =========================================================
+   NOTIFICAÇÕES
+   ========================================================= */
+
+.lista-notificacoes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.notificacao-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border-radius: 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    transition: 0.25s;
+}
+
+.notificacao-item:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(140, 255, 0, 0.20);
+}
+
+.notificacao-icone {
+    flex-shrink: 0;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(140, 255, 0, 0.10);
+
+    font-size: 21px;
+}
+
+.notificacao-conteudo {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.notificacao-conteudo strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--branco);
+
+    font-size: 14px;
+}
+
+.notificacao-conteudo p {
+    color: #b6c7ce;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+.notificacao-conteudo small {
+    display: block;
+
+    margin-top: 9px;
+
+    color: #708790;
+
+    font-size: 10px;
+}
+
+.notificacao-vazia {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    color: var(--cinza);
+}
+
+.notificacao-vazia span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 40px;
+
+    opacity: 0.7;
+}
+
+.notificacao-vazia p {
+    margin-bottom: 7px;
+
+    color: var(--branco);
+
+    font-weight: 700;
+}
+
+.notificacao-vazia small {
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   MENSAGENS
+   ========================================================= */
+
+.mensagem-meta {
+    margin-top: 12px;
+
+    color: var(--verde);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+#mensagemExtra,
+#mensagemGasto {
+    display: block;
+
+    margin-top: 10px;
+
+    color: var(--verde);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DICAS NORMAIS
+   ========================================================= */
+
+.dica {
+    color: var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+#dicaRotativa {
+    min-height: 20px;
+
+    color: #bfd0d6;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   DICA DO RODAPÉ
+   ========================================================= */
+
+.dica-rodape {
+    width: 100%;
+
+    margin-top: 28px;
+
+    margin-bottom: 25px;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(25, 201, 255, 0.14);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(7, 31, 41, 0.98),
+            rgba(4, 24, 32, 0.98)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.dica-rodape > div {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 201, 40, 0.10);
+
+    border: 1px solid rgba(255, 201, 40, 0.16);
+
+    font-size: 20px;
+}
+
+.dica-rodape p {
+    margin: 0;
+
+    color: #b8cbd2;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.dica-rodape p::before {
+    content: "Dica";
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #ffc928;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   MENU INFERIOR
+   ========================================================= */
+
+.menu {
+    position: fixed;
+
+    z-index: 1000;
+
+    left: 50%;
+    bottom: 14px;
+
+    transform: translateX(-50%);
+
+    width: min(calc(100% - 28px), 620px);
+
+    height: 72px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 5px;
+
+    padding: 6px;
+
+    border-radius: 23px;
+
+    border: 1px solid rgba(140, 255, 0, 0.12);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 35, 45, 0.97),
+            rgba(3, 22, 29, 0.97)
+        );
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.55),
+        0 0 25px rgba(0, 255, 120, 0.05);
+}
+
+.menu-item {
+    position: relative;
+
+    min-height: 58px;
+
+    border: none;
+
+    border-radius: 17px;
+
+    background: transparent;
+
+    color: #718890;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        color 0.2s;
+}
+
+.menu-item span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 21px;
+
+    transition: 0.2s;
+}
+
+.menu-item small {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+}
+
+.menu-item:hover {
+    color: #dce9ed;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    transform: translateY(-2px);
+}
+
+.menu-item.ativo {
+    color: var(--verde);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(140, 255, 0, 0.12),
+            rgba(0, 140, 255, 0.06)
+        );
+
+    border: 1px solid rgba(140, 255, 0, 0.10);
+}
+
+.menu-item.ativo span {
+    filter:
+        drop-shadow(
+            0 0 7px rgba(140, 255, 0, 0.55)
+        );
+}
+
+.menu-item.ativo::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 4px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--verde);
+
+    box-shadow:
+        0 0 8px var(--verde);
+}
+
+
+/* =========================================================
+   CADASTRO
+   ========================================================= */
+
+.cadastro-container {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.cadastro-card {
+    width: min(100%, 480px);
+
+    padding: 38px;
+
+    border-radius: 28px;
+
+    border: 1px solid rgba(140, 255, 0, 0.15);
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(0, 140, 255, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #082a34,
+            #041a22
+        );
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.logo-cadastro {
+    display: block;
+
+    width: 130px;
+    height: 130px;
+
+    object-fit: contain;
+
+    margin: 0 auto 20px;
+}
+
+.cadastro-card h1 {
+    text-align: center;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--verde),
+            var(--azul-claro)
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+}
+
+.cadastro-subtitulo {
+    margin-top: 9px;
+
+    margin-bottom: 25px;
+
+    color: var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+.cadastro-info {
+    margin-top: 18px;
+
+    color: #637a84;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CADASTRO ANTIGO
+   ========================================================= */
+
+.cadastro-box {
+    max-width: 550px;
+
+    margin: 30px auto;
+}
+
+.cadastro-box .logo-area {
+    margin-bottom: 30px;
+}
+
+.cadastro-box h2 {
+    margin-bottom: 8px;
+
+    color: var(--branco);
+}
+
+.cadastro-box .dica {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #03151d;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+
+    background: #17404c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #236172;
+}
+
+
+/* =========================================================
+   SELEÇÃO
+   ========================================================= */
+
+::selection {
+    background: rgba(140, 255, 0, 0.25);
+
+    color: white;
+}
+
+
+/* =========================================================
+   ANIMAÇÕES
+   ========================================================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+.box,
+.saldo-card,
+.notificacao-item,
+.cadastro-card {
+    animation: aparecer 0.45s ease both;
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--verde);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: calc(100% - 22px);
+
+        padding-top: 20px;
+    }
+
+    .header {
+        width: calc(100% - 22px);
+
+        padding: 17px 0;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .saldo-card {
+        padding: 22px;
+    }
+
+    .resumo {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .resumo-card {
+        padding: 14px 8px;
+    }
+
+    .resumo-card > strong {
+        font-size: 13px;
+    }
+
+    .cadastro-card {
+        padding: 28px 22px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding-bottom: 100px;
+    }
+
+    .container {
+        width: calc(100% - 18px);
+    }
+
+    .header {
+        width: calc(100% - 18px);
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo-area h1 {
+        font-size: 19px;
+    }
+
+    .logo-area p {
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .notification-button {
+        width: 42px;
+        height: 42px;
+
+        font-size: 19px;
+    }
+
+    .saldo-card {
+        padding: 20px;
+
+        border-radius: 19px;
+    }
+
+    .saldo-card h2 {
+        font-size: 31px;
+    }
+
+    .box {
+        padding: 17px;
+
+        border-radius: 18px;
+    }
+
+
+    /* =====================================================
+       RESUMO NO CELULAR
+       Continua 3 lado a lado
+       ===================================================== */
+
+    .resumo {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 7px;
+    }
+
+    .resumo-card {
+        min-height: 88px;
+
+        padding: 10px 5px;
+
+        border-radius: 13px;
+    }
+
+    .icone-resumo {
+        width: 32px;
+        height: 32px;
+
+        margin-bottom: 5px;
+
+        border-radius: 9px;
+
+        font-size: 15px;
+    }
+
+    .resumo-card > span {
+        font-size: 9px;
+
+        margin-bottom: 4px;
+    }
+
+    .resumo-card > strong {
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       DICA NO CELULAR
+       ===================================================== */
+
+    .dica-rodape {
+        padding: 15px;
+
+        gap: 10px;
+
+        border-radius: 14px;
+    }
+
+    .dica-rodape > div {
+        width: 34px;
+        height: 34px;
+
+        font-size: 17px;
+    }
+
+    .dica-rodape p {
+        font-size: 11px;
+    }
+
+    .dica-rodape p::before {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       GASTOS
+       ===================================================== */
+
+    .item-gasto {
+        padding: 13px;
+    }
+
+
+    /* =====================================================
+       NOTIFICAÇÕES
+       ===================================================== */
+
+    .notificacao-item {
+        padding: 14px;
+
+        gap: 11px;
+    }
+
+    .notificacao-icone {
+        width: 40px;
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+    .notificacao-conteudo p {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       MENU
+       ===================================================== */
+
+    .menu {
+        width: calc(100% - 20px);
+
+        height: 70px;
+
+        bottom: 9px;
+
+        border-radius: 21px;
+    }
+
+    .menu-item span {
+        font-size: 19px;
+    }
+
+    .menu-item small {
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       CADASTRO
+       ===================================================== */
+
+    .cadastro-container {
+        padding: 15px;
+    }
+
+    .cadastro-card {
+        padding: 25px 18px;
+
+        border-radius: 22px;
+    }
+
+    .logo-cadastro {
+        width: 105px;
+        height: 105px;
+    }
+
+    .cadastro-card h1 {
+        font-size: 24px;
+    }
+}
